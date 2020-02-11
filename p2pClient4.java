@@ -32,8 +32,6 @@ public class p2pClient4 {
     private static boolean FLAG_Search = false;
     private static boolean FLAG_SyncStart = false;
     private static boolean FLAG_Networking = false;
-
-    public static final int TIME_TO_LIVE = 8;
     public static int electionCounter = 0;
     public static int highestElectID = -1;
     public static String FLAG_State = "";
@@ -56,6 +54,7 @@ public class p2pClient4 {
      */
     public static final int TCP_PORT = 13337; //Port to change
     public static String path = "/PATH/FILE.dat"; //path to leader entry file
+    public static final int TIME_TO_LIVE = 8; //TimeToLive
 
     public static Thread t2 = new Thread() {
         public void run() {
