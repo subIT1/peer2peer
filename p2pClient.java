@@ -1562,7 +1562,7 @@ public class p2pClient4 {
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
         System.out.println(" |\tLeaderelection: \telection\t\t\t\t      |");
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
-        System.out.println(" |\tExit network: \texit\t\t\t\t\t\t      |");
+        System.out.println(" |\tExit network: \t\texit\t\t\t\t\t      |");
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
         System.out.println(" |\tsearch ID: \t\tsearch <ID>\t\t\t\t      |");
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
@@ -1577,12 +1577,12 @@ public class p2pClient4 {
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
         System.out.println(" |\tsend-file\t\t\t\t\t\t\t      |");
         System.out.println(" |\t\t-search  <Tag/Filename>\t\t\t\t\t      |");
-        System.out.println(" |\t\t-send   -<n/id/ip> <Filename>\t\t\t\t      |");
-        System.out.println(" |\t\t-create <Filename> <Tags>\t\t\t\t      |");
-        System.out.println(" |\t\t-update <Filename> <Text>\t\t\t\t      |");
+        System.out.println(" |\t\t-send    -<n/id/ip> <Filename>\t\t\t\t      |");
+        System.out.println(" |\t\t-create  <Filename> <Tags>\t\t\t\t      |");
+        System.out.println(" |\t\t-update  <Filename> <Text>\t\t\t\t      |");
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
         System.out.println(" |\tExamples\t\t\t\t\t\t\t      |");
-        System.out.println(" |\t\tchangetime + ex-m 5 \t//add 5 minutes\t\t\t      |");
+        System.out.println(" |\t\tchangetime + -m 5 \t//add 5 minutes\t\t\t      |");
         System.out.println(" |\t\tsend -n 2 Test   \t//send 'Test' to neighbour 2\t      |");
         System.out.println(" |\t\t\t\t\t\t\t\t\t      |");
         System.out.println(" +----------------------------------------------------------------------------+\n");
