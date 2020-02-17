@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class p2pClient4 {
+public class p2pClient {
     public static ArrayList<String> clients = new ArrayList<>();
     private static ArrayList<String> neighbours = new ArrayList<>();
     public static ArrayList<Socket> neighborSockets = new ArrayList<>();
@@ -631,20 +631,20 @@ public class p2pClient4 {
         DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
         LocalTime hourDifference;
         boolean isMinus = false;
-        LocalTime secondDifference = systemTime.minusSeconds(p2pClient4.systemTime.getSecond());
-        LocalTime minuteDifference = secondDifference.minusMinutes(p2pClient4.systemTime.getMinute());
-        hourDifference = minuteDifference.minusHours(p2pClient4.systemTime.getHour());
+        LocalTime secondDifference = systemTime.minusSeconds(p2pClient.systemTime.getSecond());
+        LocalTime minuteDifference = secondDifference.minusMinutes(p2pClient.systemTime.getMinute());
+        hourDifference = minuteDifference.minusHours(p2pClient.systemTime.getHour());
         LocalTime initial = LocalTime.parse("00:00:00");
         //24:00:00 - deviation that was mentioned.
         LocalTime secondDifference1 = initial.minusSeconds(hourDifference.getSecond());
         LocalTime minuteDifference1 = secondDifference1.minusMinutes(hourDifference.getMinute());
         LocalTime hoursDifference = minuteDifference1.minusHours(hourDifference.getHour());
 
-        if (p2pClient4.systemTime.isAfter(systemTime)) {
+        if (p2pClient.systemTime.isAfter(systemTime)) {
             isMinus = true;
-            dos.writeBytes("151-" + p2pClient4.hostname + ":" + p2pClient4.TCP_PORT + "-" + hourDifference + "-" + isMinus + "\n");
+            dos.writeBytes("151-" + p2pClient.hostname + ":" + p2pClient.TCP_PORT + "-" + hourDifference + "-" + isMinus + "\n");
         } else {
-            dos.writeBytes("151-" + p2pClient4.hostname + ":" + p2pClient4.TCP_PORT + "-" + hoursDifference + "-" + isMinus + "\n");
+            dos.writeBytes("151-" + p2pClient.hostname + ":" + p2pClient.TCP_PORT + "-" + hoursDifference + "-" + isMinus + "\n");
         }
     }
 
@@ -1381,7 +1381,7 @@ public class p2pClient4 {
      * @throws IOException by reading the file
      */
     public static synchronized void sendSearchMessageToNeighbours(int id, String requesterIP, int requesterPort, int TTL, Socket connectionSocket) throws IOException {
-        if (p2pClient4.ID == id) {
+        if (p2pClient.ID == id) {
             printMessage("INFO: Self inquiries are ignored!");
             return;
         }
