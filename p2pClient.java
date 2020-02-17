@@ -50,7 +50,7 @@ public class p2pClient {
     /**
      * Parameters to change
      */
-    public static final int TCP_PORT = 13337; //Port to change
+    public static final int TCP_PORT = 1337; //Port to change
     public static String path = "/PATH/FILE.dat"; //path to leader entry file
     public static final int TIME_TO_LIVE = 8; //TimeToLive
 
