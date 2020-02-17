@@ -7,4 +7,4 @@ A complete peer to peer client with leader election and time synchronization wit
   
 
 ## example of the help view
-  ![example of the help view](https://amazon-skill-image-objects.s3.eu-central-1.amazonaws.com/help_p2p.PNG)
+  ![example of the help view](https://amazon-skill-image-objects.s3.eu-central-1.amazonaws.com/p2p_Help.PNG)
